@@ -1,0 +1,32 @@
+# Create dataset 
+hours_social <- c(1,2,3,4,5,6,7,8,9,10) 
+marks <- c(88,84,80,75,70,65,60,55,50,45) 
+data <- data.frame(hours_social, marks) 
+# Descriptive Statistics 
+mean(hours_social) 
+mean(marks) 
+sd(marks) 
+var(marks) 
+summary(data) 
+# Histogram 
+hist(hours_social, main="Social Media  
+Distribution", col="lightblue") 
+# Scatter Plot 
+plot(hours_social, marks, main="Usage vs 
+Marks", col="red", pch=16) 
+# Line Plot (Trend) 
+plot(hours_social, marks, type="l", col="blue") 
+# Correlation 
+correlation <- cor(hours_social, marks) 
+print(correlation) 
+# Regression Model 
+model <- lm(marks ~ hours_social) 
+summary(model) 
+# Prediction 
+new_data <- 
+data.frame(hours_social=c(2.5,5.5,7.5)) 
+predict(model, new_data) 
+# Residual Plot 
+plot(model$residuals, main="Residual Analysis") 
+# Boxplot 
+boxplot(hours_social, col="yellow")
